@@ -14,16 +14,16 @@ app.get("/", async (req, res) => {
   res.json({ Hello: "World" });
 });
 
-cron.schedule('*/25 * * * *', () => {
-   axios.get(`https://boiling-hamlet-92721.herokuapp.com/`)
-  .then(function (response: any) {
-    console.log('success');
-  })
-  .catch(function (error: any) {
-    console.log('Failed Moodstack ',new Date());
-  })
+// cron.schedule('*/25 * * * *', () => {
+//    axios.get(`https://boiling-hamlet-92721.herokuapp.com/`)
+//   .then(function (response: any) {
+//     console.log('success');
+//   })
+//   .catch(function (error: any) {
+//     console.log('Failed Moodstack ',new Date());
+//   })
 
-});
+// });
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
